@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-navbar color="waesong9">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>จำนวนข่าว {{ total }} ข่าว</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-card *ngFor="let ar of articles">
+    <img *ngIf="ar.urlToImage" [src]="ar.urlToImage"/>
+    <ion-card-content>
+      <ion-card-title>
+        {{ ar.title }}
+      </ion-card-title>
+      <p>
+        {{ ar.description }}
+      </p>
+    </ion-card-content>
+    <ion-row>
+      <ion-col>
+        <button ion-button clear color="waesong2" icon-left>
+          <ion-icon name="person"></ion-icon>
+          {{ ar.source.name }}
+        </button>
+      </ion-col>
+      <ion-col>
+        <button ion-button clear color="waesong2" icon-left>
+          <ion-icon name="person"></ion-icon>
+          {{ ar.author }}
+        </button>
+      </ion-col>
+      <ion-col>
+        <button ion-button clear color="waesong2" icon-left>
+          <ion-icon name="calendar"></ion-icon>
+          {{ ar.publicshedAt | date: 'dd/MM/yyy' }}
+        </button>
+      </ion-col>
+      <ion-col>
+        <button ion-button clear color="waesong2" icon-left>
+          <ion-icon name="more"></ion-icon>
+          <a href="{{ ar.url }}">อ่านเพิ่มเติม</a>
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+
+</ion-content>

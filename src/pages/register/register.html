@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-navbar color="waesong6">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+      </button>
+    <ion-title>ลงทะเบียนใช้งาน</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-item>
+    <ion-label stacked > ID Student :</ion-label>
+    <ion-input type="text" ></ion-input>
+  </ion-item>
+
+<ion-item>
+  <ion-label stacked > First Name :</ion-label>
+  <ion-input type="text" ></ion-input>
+</ion-item>
+<ion-item>
+  <ion-label stacked > Last Name :</ion-label>
+  <ion-input type="text" ></ion-input>
+</ion-item>
+<ion-item>
+  <ion-label stacked > Email :</ion-label>
+  <ion-input type="text" ></ion-input>
+</ion-item>
+<ion-item>
+  <ion-label stacked > Password :</ion-label>
+  <ion-input type="password" ></ion-input>
+</ion-item>
+<ion-item>
+  <ion-label>Dep</ion-label>
+  <ion-select [(ngModel)]="dep" interfact="popover">
+    <ion-option value="Information Technology" >Information Technology</ion-option>
+    <ion-option value="Digital Business Technology" >Digital Business Technology</ion-option>
+    <ion-option value="Food Technology" >Food Technology</ion-option>
+    <ion-option value="Textile Technology" >Textile Technology</ion-option>
+    <ion-option value="Electrical Power" >Electrical Power</ion-option>
+  </ion-select>
+</ion-item>
+
+<br>
+
+<button ion-button block round color="waesong5">REGISTER</button>
+
+
+
+</ion-content>
